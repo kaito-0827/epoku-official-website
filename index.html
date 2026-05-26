@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>神奈川大学 AIサークル epoku | 公式ウェブサイト</title>
+  
+  <!-- Favicon using beautifully styled animated network SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22><rect width=%22512%22 height=%22512%22 rx=%22100%22 fill=%22%23060913%22/><path d=%22M256 120 L256 180 M160 180 L256 240 L352 180 M160 330 L256 270 L352 330 M256 390 L256 330 M120 256 L180 256 M332 256 L392 256%22 stroke=%22%2300a1e9%22 stroke-width=%2216%22 stroke-linecap=%22round%22 fill=%22none%22/><circle cx=%22256%22 cy=%22120%22 r=%2232%22 fill=%22%237c3aed%22/><circle cx=%22352%22 cy=%22180%22 r=%2232%22 fill=%22%2300a1e9%22/><circle cx=%22392%22 cy=%22256%22 r=%2232%22 fill=%22%23ffffff%22/><circle cx=%22352%22 cy=%22332%22 r=%2232%22 fill=%22%2300a1e9%22/><circle cx=%22256%22 cy=%22392%22 r=%2232%22 fill=%22%237c3aed%22/><circle cx=%22160%22 cy=%22332%22 r=%2232%22 fill=%22%2300a1e9%22/><circle cx=%22120%22 cy=%22256%22 r=%2232%22 fill=%22%23ffffff%22/><circle cx=%22160%22 cy=%22180%22 r=%2232%22 fill=%22%2300a1e9%22/><circle cx=%22256%22 cy=%22256%22 r=%2250%22 fill=%22%23ffffff%22/><circle cx=%22256%22 cy=%22256%22 r=%2225%22 fill=%22%23060913%22/><circle cx=%22256%22 cy=%22256%22 r=%2212%22 fill=%22%2300a1e9%22/></svg>">
+  
+  <meta name="description" content="神奈川大学の公認AIサークル「epoku（エポック）」の公式ウェブサイトです。機械学習、生成AI活用、データサイエンス、Web・アプリ開発を探求し、新しい時代（Epoch-making）を実装する学生コミュニティ。">
+  <meta name="keywords" content="epoku, エポック, 神奈川大学, AIサークル, 機械学習, 生成AI, 神大サークル, ハッカソン">
+
+  <!-- Google Fonts: Outfit (Tech Header) & Noto Sans JP (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Custom Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#060913',
+            brandSlate: '#0b1120',
+            brandBlue: '#00a1e9',
+            brandPurple: '#7c3aed',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            tech: ['"Outfit"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Premium Custom Styling Sheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-slate-300 bg-brandDark antialiased selection:bg-brandBlue/30 selection:text-white">
+
+  <!-- Header Section -->
+  <header class="fixed w-full z-50 transition-all duration-300 py-4 px-6 bg-transparent" id="header">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      
+      <!-- Brand Logo / Custom Interactive Animated SVG -->
+      <a href="#" class="flex items-center gap-3 font-tech font-black text-2xl tracking-wider text-white group">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-10 h-10 shadow-md rounded-xl logo-svg">
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00a1e9" />
+              <stop offset="100%" stop-color="#7c3aed" />
+            </linearGradient>
+          </defs>
+          <rect width="512" height="512" rx="110" fill="#0b1120" stroke="rgba(255,255,255,0.05)" stroke-width="10"/>
+          <path class="logo-line" d="M256 120 L256 180 M160 180 L256 240 L352 180 M160 330 L256 270 L352 330 M256 390 L256 330 M120 256 L180 256 M332 256 L392 256" stroke="#00a1e9" stroke-width="20" stroke-linecap="round" fill="none"/>
+          <circle cx="256" cy="120" r="30" fill="#7c3aed" class="transition-transform group-hover:scale-125 duration-300"/>
+          <circle cx="352" cy="180" r="30" fill="#00a1e9"/>
+          <circle cx="392" cy="256" r="30" fill="#ffffff"/>
+          <circle cx="352" cy="332" r="30" fill="#00a1e9"/>
+          <circle cx="256" cy="392" r="30" fill="#7c3aed"/>
+          <circle cx="160" cy="332" r="30" fill="#00a1e9"/>
+          <circle cx="120" cy="256" r="30" fill="#ffffff"/>
+          <circle cx="160" cy="180" r="30" fill="#00a1e9"/>
+          <circle cx="256" cy="256" r="48" fill="#ffffff"/>
+          <circle cx="256" cy="256" r="22" fill="#0b1120"/>
+          <circle cx="256" cy="256" r="10" fill="#00a1e9"/>
+        </svg>
+        <span class="bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent group-hover:text-brandBlue transition duration-300">epoku</span>
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+        <a href="#concept" class="hover:text-brandBlue transition-colors duration-200">Concept</a>
+        <a href="#playground" class="hover:text-brandBlue transition-colors duration-200 flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> AI Playground
+        </a>
+        <a href="#about" class="hover:text-brandBlue transition-colors duration-200">About</a>
+        <a href="#activities" class="hover:text-brandBlue transition-colors duration-200">Activities</a>
+        <a href="#news" class="hover:text-brandBlue transition-colors duration-200">News</a>
+        <a href="#contact" class="px-5 py-2.5 bg-gradient-to-r from-brandBlue to-blue-600 text-white rounded-xl hover:shadow-[0_0_20px_rgba(0,161,233,0.4)] transition transform hover:-translate-y-0.5 duration-200 font-bold shadow-md">
+          Join Us
+        </a>
+      </nav>
+
+      <!-- Mobile Navigation Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white transition focus:outline-none w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 mt-4 mx-6 rounded-2xl glass-panel border border-white/10 p-5 shadow-2xl z-40">
+      <div class="flex flex-col space-y-4 font-bold text-center">
+        <a href="#concept" class="block py-2.5 text-slate-300 hover:text-brandBlue border-b border-white/5 menu-link">Concept</a>
+        <a href="#playground" class="block py-2.5 text-slate-300 hover:text-brandBlue border-b border-white/5 menu-link">AI Playground</a>
+        <a href="#about" class="block py-2.5 text-slate-300 hover:text-brandBlue border-b border-white/5 menu-link">About</a>
+        <a href="#activities" class="block py-2.5 text-slate-300 hover:text-brandBlue border-b border-white/5 menu-link">Activities</a>
+        <a href="#news" class="block py-2.5 text-slate-300 hover:text-brandBlue border-b border-white/5 menu-link">News</a>
+        <a href="#contact" class="block py-3 bg-gradient-to-r from-brandBlue to-brandPurple text-white rounded-xl menu-link">Join Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero-section" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brandDark pt-20">
+    <!-- Interactive Canvas Particle Background -->
+    <canvas id="neural-canvas" class="absolute inset-0 w-full h-full pointer-events-auto z-0"></canvas>
+    
+    <!-- Cyber Tech background Grid -->
+    <div class="absolute inset-0 bg-grid-tech z-0 pointer-events-none opacity-40"></div>
+    
+    <!-- Neon Blurred Decorative Blobs -->
+    <div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-brandBlue/10 rounded-full mix-blend-screen filter blur-[120px] pointer-events-none animate-blob-1"></div>
+    <div class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-brandPurple/10 rounded-full mix-blend-screen filter blur-[100px] pointer-events-none animate-blob-2"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center pointer-events-none">
+      
+      <!-- Public Organization Tag -->
+      <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-slate-900/80 border border-white/10 text-brandBlue rounded-full text-xs font-bold font-mono tracking-wider shadow-md pointer-events-auto hover:bg-slate-800 transition">
+        <span class="w-2 h-2 rounded-full bg-brandBlue animate-pulse"></span>
+        神奈川大学 公認団体 (申請予定)
+      </div>
+      
+      <!-- Core Catchphrase -->
+      <h1 class="text-4xl md:text-7xl lg:text-8xl font-tech font-black tracking-tight mb-8 leading-none text-white pointer-events-auto">
+        AIで、<br class="md:hidden">
+        <span class="text-glow-gradient">未来を実装する。</span>
+      </h1>
+      
+      <!-- Sub-catchphrase & Description -->
+      <p class="text-base md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed pointer-events-auto">
+        機械学習の「学習単位（Epoch）」と「新しい時代をつくる（Epoch-making）」を掛け合わせ、
+        先端のAI技術を学内から社会へと実装していく、神奈川大学発の次世代AIコミュニティ。
+      </p>
+      
+      <!-- CTA Action Group -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pointer-events-auto">
+        <a href="https://discord.gg/tp7PXrevqT" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brandBlue via-blue-600 to-brandPurple text-white font-bold rounded-2xl shadow-lg hover:shadow-[0_0_30px_rgba(0,161,233,0.5)] hover:scale-105 transition transform duration-300 flex items-center justify-center gap-2 group">
+          <i class="fa-brands fa-discord text-lg group-hover:rotate-12 transition"></i> Discordに参加する
+        </a>
+        <a href="#playground" class="w-full sm:w-auto px-8 py-4 bg-slate-900/60 border border-white/10 hover:border-brandBlue/50 text-white font-bold rounded-2xl hover:bg-slate-800/80 transition duration-300 flex items-center justify-center gap-2">
+          AI Playgroundを試す <i class="fa-solid fa-microchip text-brandBlue"></i>
+        </a>
+      </div>
+      
+      <!-- Downward Indicator Arrow -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-auto text-slate-500 hover:text-white transition duration-300 cursor-pointer">
+        <span class="text-xs font-mono font-bold uppercase tracking-widest">Scroll</span>
+        <i class="fa-solid fa-chevron-down animate-bounce text-sm"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Wrap -->
+  <main class="relative z-10">
+
+    <!-- Concept Explanation Section -->
+    <section id="concept" class="py-24 relative overflow-hidden border-t border-white/5 bg-slate-950/40">
+      <div class="max-w-5xl mx-auto px-6 scroll-reveal">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="text-brandBlue font-tech font-bold tracking-widest uppercase text-sm block mb-2">Our Identity</span>
+            <h2 class="text-3xl md:text-5xl font-tech font-black text-white mb-6">epoku とは？</h2>
+            <div class="w-12 h-1 bg-gradient-to-r from-brandBlue to-brandPurple rounded-full mb-6"></div>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              サークル名である「epoku」は、機械学習を学ぶ人なら誰もが目にする単語**「Epoch（エポック）」**に由来します。
+            </p>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              機械学習における1エポックとは、訓練データ全体を一周学習すること。私たちは、**「日々インプットとアウトプットを繰り返し、成長（アップデート）し続けるコミュニティでありたい」**という強い意志を持っています。
+            </p>
+            <p class="text-slate-400 leading-relaxed">
+              そしてもう一つ、神奈川大学において、これまでにないAI活用の潮流を起こす**「Epoch-making（新時代を拓く存在）」**になるというビジョンを掲げています。
+            </p>
+          </div>
+          
+          <!-- Visual Concept Node Box -->
+          <div class="glass-panel rounded-3xl p-8 border border-white/10 bg-slate-900/60 relative overflow-hidden group shadow-2xl">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-brandBlue/10 rounded-full blur-3xl group-hover:bg-brandBlue/20 transition"></div>
+            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brandPurple/10 rounded-full blur-3xl group-hover:bg-brandPurple/20 transition"></div>
+            
+            <div class="font-mono text-xs text-brandBlue mb-4 flex justify-between items-center">
+              <span>// epoku-compiler-v1.0.3</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            </div>
+            
+            <div class="space-y-6 font-mono text-sm">
+              <div class="border-l-2 border-brandBlue/30 pl-4 py-1">
+                <span class="text-slate-500 block">const name = "epoku";</span>
+              </div>
+              <div class="border-l-2 border-brandBlue/30 pl-4 py-1">
+                <span class="text-cyan-400 font-bold block">1. Epoch (エポック)</span>
+                <span class="text-slate-500 block text-xs mt-1">「機械学習の学習サイクル」を表す。一巡するたびに損失が低下し、AIはより賢くなる。継続的な学習と成長の象徴。</span>
+              </div>
+              <div class="border-l-2 border-brandPurple/30 pl-4 py-1">
+                <span class="text-purple-400 font-bold block">2. Epoch-making (新時代の創出)</span>
+                <span class="text-slate-500 block text-xs mt-1">「画期的な、新時代を開く」の意。神大生がテクノロジーの主役となり、未来を切り拓く旗印。</span>
+              </div>
+              <div class="border-t border-white/5 pt-4 text-center">
+                <span class="text-glow-gradient text-base font-black">AI &times; Community &times; Future</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Playground Section -->
+    <section id="playground" class="py-24 relative overflow-hidden border-t border-white/5">
+      <div class="max-w-6xl mx-auto px-6 scroll-reveal">
+        
+        <div class="text-center mb-16">
+          <span class="text-brandBlue font-tech font-bold tracking-widest uppercase text-sm block mb-2">Interactive Sandbox</span>
+          <h2 class="text-3xl md:text-5xl font-tech font-black text-white mb-4">AI Playground</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-brandBlue to-brandPurple mx-auto rounded-full"></div>
+          <p class="mt-4 text-slate-400 max-w-xl mx-auto text-sm">
+            AIサークル「epoku」について気になる質問を、シミュレータAIに尋ねてみましょう。リアルタイムでストリーミング回答します！
+          </p>
+        </div>
+
+        <!-- Chat Console Layout -->
+        <div class="grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          
+          <!-- Prompts selection sidebar -->
+          <div class="lg:col-span-1 flex flex-col gap-3">
+            <span class="text-xs font-mono font-bold text-slate-500 uppercase tracking-widest px-2">Prompt Library</span>
+            
+            <button data-prompt="about" class="chat-prompt-btn p-4 rounded-2xl glass-panel border border-white/5 hover:border-brandBlue/30 text-left text-slate-300 hover:text-white hover:bg-slate-900/60 transition group flex items-center justify-between text-sm active:scale-[0.98]">
+              <span class="flex items-center gap-3">
+                <i class="fa-solid fa-address-card text-brandBlue text-base"></i>
+                epokuってどんなサークル？
+              </span>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-brandBlue transition text-xs"></i>
+            </button>
+            
+            <button data-prompt="beginners" class="chat-prompt-btn p-4 rounded-2xl glass-panel border border-white/5 hover:border-brandBlue/30 text-left text-slate-300 hover:text-white hover:bg-slate-900/60 transition group flex items-center justify-between text-sm active:scale-[0.98]">
+              <span class="flex items-center gap-3">
+                <i class="fa-solid fa-graduation-cap text-brandPurple text-base"></i>
+                初心者でもついていける？
+              </span>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-brandPurple transition text-xs"></i>
+            </button>
+            
+            <button data-prompt="activities" class="chat-prompt-btn p-4 rounded-2xl glass-panel border border-white/5 hover:border-brandBlue/30 text-left text-slate-300 hover:text-white hover:bg-slate-900/60 transition group flex items-center justify-between text-sm active:scale-[0.98]">
+              <span class="flex items-center gap-3">
+                <i class="fa-solid fa-laptop-code text-cyan-400 text-base"></i>
+                具体的な活動内容は？
+              </span>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-cyan-400 transition text-xs"></i>
+            </button>
+            
+            <button data-prompt="join" class="chat-prompt-btn p-4 rounded-2xl glass-panel border border-white/5 hover:border-brandBlue/30 text-left text-slate-300 hover:text-white hover:bg-slate-900/60 transition group flex items-center justify-between text-sm active:scale-[0.98]">
+              <span class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-arrow-right text-emerald-400 text-base"></i>
+                どうすれば参加できる？
+              </span>
+              <i class="fa-solid fa-chevron-right text-slate-600 group-hover:text-emerald-400 transition text-xs"></i>
+            </button>
+          </div>
+          
+          <!-- Terminal Main Window -->
+          <div class="lg:col-span-2 flex flex-col h-[420px] rounded-3xl glass-panel border border-white/10 bg-brandDark/85 shadow-2xl relative">
+            
+            <!-- Terminal Header -->
+            <div class="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-slate-950/80 rounded-t-3xl">
+              <div class="flex items-center gap-2">
+                <span class="w-3 w-3 h-3 rounded-full bg-rose-500"></span>
+                <span class="w-3 w-3 h-3 rounded-full bg-amber-500"></span>
+                <span class="w-3 w-3 h-3 rounded-full bg-emerald-500"></span>
+                <span class="ml-2 font-mono text-xs text-slate-500 tracking-wider">epoku-gpt-v3.5.sh</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-500 font-mono text-xs">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                ONLINE
+              </div>
+            </div>
+            
+            <!-- Terminal Messages Log -->
+            <div id="chat-body" class="flex-1 overflow-y-auto p-6 scroll-scrollbar custom-scrollbar space-y-4">
+              
+              <!-- System Welcome Message -->
+              <div class="flex items-start gap-3 mb-4">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brandBlue to-brandPurple flex items-center justify-center text-white shrink-0 shadow-md text-sm">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="flex-1 bg-slate-900/90 border border-white/5 rounded-xl px-4 py-3 text-slate-300 text-sm leading-relaxed">
+                  <span class="text-white font-black">epoku AI AIアシスタント</span>
+                  <p class="mt-1">epokuの公式チャットシミュレータへようこそ！左側のメニューから気になる質問を選ぶと、リアルタイムでお答えします。気軽に選んでみてくださいね！</p>
+                </div>
+              </div>
+              
+              <!-- Typing Indicator Placeholder (Hidden by default) -->
+              <div id="chat-typing-indicator" class="flex items-start gap-3 mb-4 hidden">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brandBlue to-brandPurple flex items-center justify-center text-white shrink-0 shadow-md text-xs">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="bg-slate-900/90 border border-white/5 rounded-xl px-4 py-3 text-slate-400 text-xs flex items-center gap-1.5">
+                  <span class="font-mono">AIが回答を生成中</span>
+                  <span class="flex gap-1 items-center">
+                    <span class="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></span>
+                    <span class="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+                    <span class="w-1.5 h-1.5 bg-slate-500 rounded-full animate-bounce" style="animation-delay: 0.3s"></span>
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative overflow-hidden bg-slate-950/40 border-t border-white/5">
+      <!-- Background glow -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brandBlue/5 rounded-full filter blur-[150px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 scroll-reveal">
+        
+        <div class="text-center mb-20">
+          <span class="text-brandBlue font-tech font-bold tracking-widest uppercase text-sm block mb-2">Our Features</span>
+          <h2 class="text-3xl md:text-5xl font-tech font-black text-white mb-4">What We Do</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-brandBlue to-brandPurple mx-auto rounded-full"></div>
+          <p class="mt-4 text-slate-400">epokuが展開する3つのコアアクティビティ</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          
+          <!-- Card 1 -->
+          <div class="glowing-card p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-14 h-14 bg-gradient-to-br from-brandBlue to-cyan-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-[0_0_15px_rgba(0,161,233,0.3)]">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">AIイベント・勉強会の主催</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              先端のAI技術をメンバー間でハンズオン学習。生成AIツール（ChatGPT、Claude、Midjourneyなど）のワークショップやハッカソンを定期的に開催し、能動的なアウトプットを支援します。
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glowing-card p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-14 h-14 bg-gradient-to-br from-brandPurple to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-[0_0_15px_rgba(124,58,237,0.3)]">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">実践的なプログラミング開発</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              PythonやJavaScriptを使った機械学習実装、画像認識（YOLOv8等）、データサイエンス、フルスタックWeb開発まで幅広くサポート。初学者でもチーム開発を通じて本物のプロダクト構築を経験できます。
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glowing-card p-8 rounded-3xl relative overflow-hidden group">
+            <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">学内外へのAI普及発信</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              大学祭での「体験型AI展示」や他大学のAIコミュニティとの連携、地域社会へのAI啓発活動を企画。AIの楽しさや可能性をオープンに共有し、正しいリテラシーの発信を目指します。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Activities Gallery Section -->
+    <section id="activities" class="py-24 relative overflow-hidden border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-6 scroll-reveal">
+        
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div>
+            <span class="text-brandBlue font-tech font-bold tracking-widest uppercase text-sm block mb-2">Our Footprints</span>
+            <h2 class="text-3xl md:text-5xl font-tech font-black text-white">Activities</h2>
+            <p class="text-slate-400 mt-2">日々の学びと開発シーン</p>
+          </div>
+          <a href="#contact" class="text-brandBlue font-bold hover:text-white transition duration-200 flex items-center gap-2 group text-sm">
+            活動の様子をもっと見る <i class="fa-solid fa-arrow-right transition transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- Dynamic Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Gallery Item 1 -->
+          <div class="col-span-1 md:col-span-2 row-span-2 relative rounded-3xl overflow-hidden group shadow-xl border border-white/5 h-[360px] md:h-auto min-h-[300px]">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Study session" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/40 to-transparent flex flex-col justify-end p-8">
+              <span class="text-xs font-bold font-mono bg-brandBlue/20 text-brandBlue border border-brandBlue/30 px-3 py-1 rounded-full w-max mb-3">Study / 勉強会</span>
+              <h3 class="text-2xl font-black text-white mb-2">先端テクノロジーの定期勉強会</h3>
+              <p class="text-slate-400 text-xs max-w-sm">毎週、新しいAI技術やWebプログラミング技術のハンズオンセッションを行い、実戦的な技術を積み重ねています。</p>
+            </div>
+          </div>
+          
+          <!-- Gallery Item 2 -->
+          <div class="relative rounded-3xl overflow-hidden group shadow-xl border border-white/5 h-64 md:h-auto">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coding" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark/90 via-brandDark/20 to-transparent flex flex-col justify-end p-6">
+              <span class="text-xs font-bold font-mono bg-brandPurple/20 text-brandPurple border border-brandPurple/30 px-2.5 py-0.5 rounded-full w-max mb-2">Development / アプリ・Web開発</span>
+              <h3 class="text-lg font-black text-white">プロダクトの共同開発</h3>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="relative rounded-3xl overflow-hidden group shadow-xl border border-white/5 h-64 md:h-auto">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Workshops" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark/90 via-brandDark/20 to-transparent flex flex-col justify-end p-6">
+              <span class="text-xs font-bold font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2.5 py-0.5 rounded-full w-max mb-2">Event / 学内外連携</span>
+              <h3 class="text-lg font-black text-white">体験ワークショップ主催</h3>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="col-span-1 md:col-span-2 relative rounded-3xl overflow-hidden group shadow-xl border border-white/5 h-64 md:h-auto">
+            <img src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Festival" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/40 to-transparent flex flex-col justify-end p-6">
+              <span class="text-xs font-bold font-mono bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2.5 py-0.5 rounded-full w-max mb-2">Exhibition / 大学祭出展</span>
+              <h3 class="text-xl font-black text-white">大学祭でのAI体験ブース</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-24 relative overflow-hidden bg-slate-950/40 border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-6 scroll-reveal">
+        
+        <div class="text-center mb-16">
+          <span class="text-brandBlue font-tech font-bold tracking-widest uppercase text-sm block mb-2">Fresh Updates</span>
+          <h2 class="text-3xl md:text-5xl font-tech font-black text-white mb-4">News & Updates</h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-brandBlue to-brandPurple mx-auto rounded-full"></div>
+        </div>
+
+        <!-- News list wrapper (Populated dynamically via script.js) -->
+        <div id="news-list" class="space-y-4 min-h-[220px]">
+          <!-- Dynamic loading indicator fallback inside script.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Native HTML5 Dialog for News Article Detail -->
+    <dialog id="news-dialog" class="w-[calc(100%-2rem)] max-w-3xl rounded-3xl border border-white/10 bg-slate-900 text-slate-300 p-0 shadow-2xl overflow-hidden custom-scrollbar">
+      
+      <!-- Modal Container Header -->
+      <div class="bg-slate-950/80 px-8 py-6 border-b border-white/5 flex justify-between items-start gap-4">
+        <div>
+          <div class="flex items-center gap-3 mb-2 flex-wrap">
+            <span id="modal-dialog-category" class="text-xs font-bold px-2.5 py-0.5 rounded-full"></span>
+            <span id="modal-dialog-date" class="text-xs font-mono font-bold text-slate-500"></span>
+          </div>
+          <h3 id="modal-dialog-title" class="text-xl md:text-2xl font-black text-white leading-tight"></h3>
+        </div>
+        <button onclick="closeNewsModal()" class="text-slate-500 hover:text-white transition w-8 h-8 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 flex items-center justify-center shrink-0">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Scrollable Modal Main Body -->
+      <div class="px-8 py-8 bg-brandDark/50 max-h-[55vh] overflow-y-auto custom-scrollbar">
+        <div id="modal-dialog-content" class="rich-text">
+          <!-- Rich Content injected by JS -->
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="bg-slate-950/60 px-8 py-4 border-t border-white/5 flex justify-between items-center">
+        <span class="text-xs font-mono text-slate-500 tracking-wider">epoku news reader v1.0</span>
+        <button onclick="closeNewsModal()" class="px-5 py-2 bg-slate-900 border border-white/10 hover:border-white/25 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition">
+          閉じる
+        </button>
+      </div>
+    </dialog>
+
+    <!-- Join US CTA Section -->
+    <section id="contact" class="py-24 relative overflow-hidden border-t border-white/5">
+      <!-- Glow background -->
+      <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-brandBlue/10 rounded-full blur-[100px] pointer-events-none"></div>
+      
+      <div class="max-w-6xl mx-auto px-6 relative z-10 scroll-reveal">
+        <div class="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+          
+          <!-- Info Details -->
+          <div>
+            <span class="text-brandPurple font-tech font-bold tracking-widest uppercase text-sm block mb-2">Registration</span>
+            <h2 class="text-3xl md:text-5xl font-tech font-black text-white mb-6">Join The Epoch-makers</h2>
+            <p class="text-slate-400 leading-relaxed mb-8 max-w-lg">
+              epokuは、学部・学科・学年、そしてプログラミングやAIの経験レベルを問わず、神大のすべての学生に門戸を開いています。<br><br>
+              「最先端のAIを使えるようになりたい」「仲間と一緒にプロダクトを作ってみたい」「ハッカソンに挑戦したい」など、少しでも興味がある方はぜひDiscordコミュニティにご参加ください！
+            </p>
+            
+            <div class="flex flex-col gap-4 font-bold max-w-xs mb-8">
+              <a href="https://discord.gg/tp7PXrevqT" class="px-6 py-4 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-2xl flex items-center justify-center gap-3 transition shadow-lg hover:shadow-[#5865F2]/20">
+                <i class="fa-brands fa-discord text-2xl"></i>
+                Discord コミュニティに参加する
+              </a>
+            </div>
+            
+            <!-- Social Link Icons -->
+            <div class="flex gap-6 items-center">
+              <span class="text-xs font-mono font-bold text-slate-500 uppercase tracking-widest">Connect:</span>
+              <a href="#" class="text-2xl text-slate-400 hover:text-brandBlue transition transform hover:scale-110 duration-200"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="text-2xl text-slate-400 hover:text-pink-500 transition transform hover:scale-110 duration-200"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="text-2xl text-slate-400 hover:text-white transition transform hover:scale-110 duration-200"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-slate-950 text-slate-500 border-t border-white/5 py-12 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Brand & Info -->
+      <div class="text-center md:text-left">
+        <span class="text-xl font-tech font-black text-white tracking-widest block mb-2">epoku</span>
+        <span class="text-xs font-bold block mb-1">神奈川大学AIサークル (申請予定)</span>
+        <span class="text-[10px] text-slate-600 block">Kanagawa University AI Student Organization</span>
+      </div>
+      
+    </div>
+    
+    <div class="max-w-6xl mx-auto mt-8 pt-8 border-t border-white/5 text-center text-[10px] text-slate-700">
+      &copy; 2026 epoku AI Circle. All Rights Reserved. Designed for premium tech experience.
+    </div>
+  </footer>
+
+  <!-- Core Javascript File -->
+  <script src="script.js"></script>
+</body>
+</html>

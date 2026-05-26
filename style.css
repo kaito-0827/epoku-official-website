@@ -1,0 +1,319 @@
+/* ==========================================================================
+   epoku Official Website - Core Premium Stylesheet
+   Designed for deep tech AI aesthetic, glassmorphism, and hardware-accelerated motion.
+   ========================================================================== */
+
+:root {
+  /* Core Theme Colors (HSL based for harmonious tuning) */
+  --bg-dark: 224 35% 6%;         /* #060913 - Deep space navy-black */
+  --panel-dark: 222 30% 10%;     /* #0b1120 - Dark glassmorphic panels */
+  --text-primary: 210 40% 98%;   /* #f8fafc - Bright slate white */
+  --text-secondary: 215 15% 70%; /* #94a3b8 - Soft slate gray */
+  
+  /* Vibrant AI Accents */
+  --accent-cyan: 198 100% 46%;   /* #00a1e9 - Electric cyan */
+  --accent-purple: 262 83% 58%;  /* #7c3aed - Neon violet */
+  --accent-indigo: 239 84% 67%;  /* #6366f1 - Vivid indigo */
+  --accent-green: 142 70% 45%;   /* #10b981 - Tech mint green */
+
+  /* Glassmorphism properties */
+  --glass-bg: rgba(11, 17, 32, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-shine: rgba(255, 255, 255, 0.02);
+}
+
+/* Base resets & behavior */
+html {
+  scroll-behavior: smooth;
+  background-color: hsl(var(--bg-dark));
+  color: hsl(var(--text-primary));
+}
+
+body {
+  font-family: 'Outfit', 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+  background-color: hsl(var(--bg-dark));
+  line-height: 1.6;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--bg-dark));
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  border: 2px solid hsl(var(--bg-dark));
+  transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 161, 233, 0.5);
+}
+
+/* Custom Scrollbar for inner boxes */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent-cyan));
+}
+
+/* ==========================================================================
+   Design System Utility Classes
+   ========================================================================== */
+
+/* Premium Glass Container */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  position: relative;
+  overflow: hidden;
+}
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  z-index: 1;
+}
+
+/* Text Gradient Effect */
+.text-glow-gradient {
+  background: linear-gradient(135deg, hsl(var(--accent-cyan)) 0%, hsl(var(--accent-indigo)) 50%, hsl(var(--accent-purple)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 15px rgba(0, 161, 233, 0.4);
+}
+
+/* Glowing Border Effect (Hover) */
+.glowing-card {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--glass-border);
+  background: rgba(11, 17, 32, 0.4);
+}
+.glowing-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent, rgba(255,255,255,0.05), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.glowing-card:hover {
+  transform: translateY(-5px);
+  background: rgba(18, 27, 45, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(0, 161, 233, 0.25);
+  border-color: rgba(0, 161, 233, 0.3);
+}
+.glowing-card:hover::after {
+  background: linear-gradient(135deg, hsl(var(--accent-cyan)), hsl(var(--accent-purple)));
+}
+
+/* Custom Input Validation Styles */
+.form-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+.form-input:focus {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: hsl(var(--accent-cyan));
+  box-shadow: 0 0 15px rgba(0, 161, 233, 0.25);
+  outline: none;
+}
+/* Modern browser-native `:user-valid` and `:has` enhancements */
+.form-input:user-valid {
+  border-color: hsl(var(--accent-green));
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.15);
+}
+
+/* ==========================================================================
+   Animations & Transitions
+   ========================================================================== */
+
+/* Floating Blobs */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-25px) scale(1.08);
+  }
+}
+.animate-blob-1 {
+  animation: float 10s ease-in-out infinite;
+}
+.animate-blob-2 {
+  animation: float 12s ease-in-out infinite 2s;
+}
+.animate-blob-3 {
+  animation: float 14s ease-in-out infinite 4s;
+}
+
+/* Neon Glow Pulsing */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+.pulse-glow-bg {
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+/* Grid overlay background */
+.bg-grid-tech {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Typwriter Caret Animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: hsl(var(--accent-cyan)) }
+}
+.typewriter-cursor {
+  border-right: 2px solid hsl(var(--accent-cyan));
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Logo Animation */
+.logo-svg:hover .logo-line {
+  stroke: url(#logo-grad);
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw-logo 1.5s ease-out forwards;
+}
+@keyframes draw-logo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ==========================================================================
+   Scroll-Driven Entry Reveals (Progressive Enhancement)
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes reveal-in {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+        filter: blur(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+    
+    .scroll-reveal {
+      animation: reveal-in auto linear forwards;
+      animation-timeline: view();
+      animation-range: entry 10% entry 40%;
+    }
+  }
+}
+
+/* Fallback class applied by JS in non-supporting browsers */
+.scroll-reveal-fallback {
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  filter: blur(8px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* ==========================================================================
+   microCMS Content Formatting (Modal Rich-Text)
+   ========================================================================== */
+.rich-text {
+  color: hsl(var(--text-secondary));
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+.rich-text h1, .rich-text h2, .rich-text h3 {
+  color: white;
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.8em;
+  letter-spacing: -0.02em;
+}
+.rich-text h1 { font-size: 1.75em; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 0.3em; }
+.rich-text h2 { font-size: 1.4em; border-left: 4px solid hsl(var(--accent-cyan)); padding-left: 0.6em; }
+.rich-text h3 { font-size: 1.2em; }
+.rich-text p { margin-bottom: 1.3em; }
+.rich-text ul { list-style-type: disc; margin-left: 1.6em; margin-bottom: 1.3em; }
+.rich-text ol { list-style-type: decimal; margin-left: 1.6em; margin-bottom: 1.3em; }
+.rich-text li { margin-bottom: 0.4em; }
+.rich-text a { color: hsl(var(--accent-cyan)); text-decoration: none; border-bottom: 1px dashed rgba(0, 161, 233, 0.5); transition: all 0.2s ease; }
+.rich-text a:hover { color: hsl(var(--accent-indigo)); border-bottom-color: hsl(var(--accent-indigo)); }
+.rich-text img { max-width: 100%; height: auto; border-radius: 0.75rem; margin: 1.5em 0; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.rich-text blockquote { border-left: 4px solid hsl(var(--accent-purple)); padding-left: 1.2em; color: hsl(var(--text-secondary)); font-style: italic; margin: 1.5em 0; background: rgba(124, 58, 237, 0.05); border-radius: 0 0.5rem 0.5rem 0; padding-top: 0.8em; padding-bottom: 0.8em; }
+.rich-text code { background: rgba(255, 255, 255, 0.06); padding: 0.2em 0.4em; border-radius: 4px; font-family: monospace; font-size: 0.9em; border: 1px solid rgba(255,255,255,0.05); color: #f43f5e; }
+.rich-text pre { background: #0c101a; border: 1px solid rgba(255,255,255,0.08); border-radius: 0.5rem; padding: 1.2em; overflow-x: auto; margin-bottom: 1.3em; }
+.rich-text pre code { background: transparent; padding: 0; border: none; color: #f8fafc; font-size: 0.875rem; }
+
+/* ==========================================================================
+   Custom Native Modal <dialog> styles
+   ========================================================================== */
+dialog::backdrop {
+  background: rgba(4, 6, 12, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+dialog[open] {
+  animation: modal-zoom-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes modal-zoom-in {
+  from {
+    transform: scale(0.92) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
